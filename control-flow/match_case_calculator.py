@@ -1,7 +1,7 @@
-num1 = int(input("Enter the first number:"))
-num2 = int(input("Enter the second number:"))
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
 
-oper = input("Choose the operation (+, -, *, /):")
+operation = input("Choose the operation (+, -, *, /): ")
 
 
 add = num1 + num2
@@ -9,7 +9,7 @@ diff = num1 - num2
 prod = num1 * num2
 quo = num1 / num2
 
-match oper:
+match operation:
     case '+':
         print(f"The result is {add}")
     case '-':
