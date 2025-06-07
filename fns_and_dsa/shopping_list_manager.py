@@ -12,10 +12,12 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
+            int(choice)
             item = input("Enter item name: ")
             shopping_list.append(item)
             pass
         elif choice == '2':
+            int(choice)
             item = input("Enter item name: ")
             if item in shopping_list:
                 shopping_list.remove(item)
@@ -23,9 +25,11 @@ def main():
                 print("Item is not available in shopping list")
             pass
         elif choice == '3':
+            int(choice)
             print(shopping_list)
             pass
         elif choice == '4':
+            int(choice)
             print("Goodbye!")
             break
         else:
