@@ -11,25 +11,25 @@ def main():
         display_menu()
         choice = input("Enter your choice: ")
 
-        if choice == '1':
-            int(choice)
+        # Validate input
+        if not choice.isdigit():
+            print("Invalid choice. Please enter a number.")
+            continue
+
+        choice = int(choice)
+
+        if choice == 1:
             item = input("Enter item name: ")
             shopping_list.append(item)
-            pass
-        elif choice == '2':
-            int(choice)
+        elif choice == 2:
             item = input("Enter item name: ")
             if item in shopping_list:
                 shopping_list.remove(item)
             else:
                 print("Item is not available in shopping list")
-            pass
-        elif choice == '3':
-            int(choice)
+        elif choice == 3:
             print(shopping_list)
-            pass
-        elif choice == '4':
-            int(choice)
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
