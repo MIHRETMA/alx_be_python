@@ -14,7 +14,8 @@ def main():
         if choice == '1':
             int(choice)
             item = input("Enter item name: ").strip()
-            shopping_list.append(item)
+            if item:
+                shopping_list.append(item)
             pass
         elif choice == '2':
             int(choice)
