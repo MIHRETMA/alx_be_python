@@ -16,8 +16,6 @@ def main():
             print("Invalid input. Please enter a number.")
             continue
 
-        choice = int(choice)  # Convert to integer after validation
-
         if choice == 1:
             item = input("Enter item name: ").strip()
             if item:
