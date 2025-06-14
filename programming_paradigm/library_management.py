@@ -32,7 +32,7 @@ class Library:
                 return book.returned_book()
         return f"Book {title} is unavailable."
     def list_available_books(self):
-        available = [book.title for book in self._books if book.available_book()]
-        return available if available else "No books available."
+        available = [f'{book.title} by {book.author}' for book in self._books if book.available_book()]
+        return "\n   ".join(available) if available else "No books are currently available."
     
             
