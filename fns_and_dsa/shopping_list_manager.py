@@ -9,27 +9,26 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ").strip()
 
-        if choice == '1':
-            int(choice)
-            item = input("Enter item name: ")
-            shopping_list.append(item)
-            pass
-        elif choice == '2':
-            int(choice)
-            item = input("Enter item name: ")
+        # Validate if choice is a number
+        if not choice.isdigit():
+            print("Invalid input. Please enter a number.")
+            continue
+
+        if choice == 1:
+            item = input("Enter item name: ").strip()
+            if item:
+                shopping_list.append(item)
+        elif choice == 2:
+            item = input("Enter item name: ").strip()
             if item in shopping_list:
                 shopping_list.remove(item)
             else:
                 print("Item is not available in shopping list")
-            pass
-        elif choice == '3':
-            int(choice)
-            print(shopping_list)
-            pass
-        elif choice == '4':
-            int(choice)
+        elif choice == 3:
+            print("Shopping List:", shopping_list)
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
